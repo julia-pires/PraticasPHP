@@ -13,7 +13,8 @@ function dadosAtualizados($resultado) {
     $table .= '<td>Email</td>';
     $table .= '<td>Data de Nascimento</td>';
     $table .= '<td>Telefone</td>';
-    //$table .= '<td>Created_at</td>';
+    $table .= '<td>Created_at</td>';
+    $table .= '<td>Updated_at</td>';
     $table .= '<td>Ip</td>';
     $table .= '</tr>';
     $table .= '</thead>';
@@ -27,7 +28,8 @@ function dadosAtualizados($resultado) {
     $table .= "<td>{$resultado['email']}</td>";
     $table .= "<td>{$resultado['data_nascimento']}</td>";
     $table .= "<td>{$resultado['telefone']}</td>";
-    //$table .= "<td>{$resultado['created_at']}</td>";
+    $table .= "<td>{$resultado['created_at']}</td>";
+    $table .= "<td>{$resultado['updated_at']}</td>";
     $table .= "<td>{$resultado['user_ip']}</td>";
 
     $table .= "<td><a href='editar.php?&id={$resultado['id']}'>Editar</a></td>";

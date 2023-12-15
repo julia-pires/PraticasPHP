@@ -78,12 +78,12 @@ class User
         }
     }
 
-    public function atualizarUsuario($id, $nome, $sobrenome, $email, $senha, $dataNasc, $telefone, $ip)
+    public function atualizarUsuario($id, $nome, $sobrenome, $email, $senha, $dataNasc, $telefone, $updated, $ip)
     {
         // Verificar se o e-mail já está cadastrado
 
         $update = "UPDATE users SET nome = '{$nome}', sobrenome = '{$sobrenome}', email = '{$email}', senha = '{$senha}',
-                 data_nascimento = '{$dataNasc}', telefone = '{$telefone}', user_ip = '{$ip}'
+                 data_nascimento = '{$dataNasc}', telefone = '{$telefone}', updated_at = '{$updated}', user_ip = '{$ip}'
              WHERE id= {$id}";
 
         $stmt = $this->db->prepare($update);

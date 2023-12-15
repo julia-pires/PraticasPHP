@@ -44,7 +44,7 @@ if ($usuarioAtualizar && $_POST) { //se tiver interação com o formulário
                     $senha = $usuarioAtualizar["senha"];
 
                     $user_ip = pegarIp();
-                    $created = (new DateTime())->format(CONF_DATE_FORMAT_DB);
+                    $updated = (new DateTime())->format(CONF_DATE_FORMAT_DB);
 
                     try {
 
@@ -61,14 +61,24 @@ if ($usuarioAtualizar && $_POST) { //se tiver interação com o formulário
                         $email = $postArray["email"];
                         $user_ip = pegarIp();
 
-                        //var_dump($postArray);
+                        $created = $usuarioAtualizar["created_at"];
 
-                        $user->atualizarUsuario($id, $nome, $sobrenome, $email, $senhaHash, $dataNasc, $telefone, $user_ip);
 
-                        echo "<h1>Dados atualizados com sucesso! :)</h1>";
+                        if ($senha != ''){
 
-                        $usuarioAtualizar = $user->read_atualizarDeletar($id_user)[0];
-                        dadosAtualizados($usuarioAtualizar);
+                            $user->atualizarUsuario($id, $nome, $sobrenome, $email,
+                                $senhaHash, $dataNasc, $telefone, $updated, $user_ip);
+
+                            echo "<h1>Dados atualizados com sucesso! :)</h1>";
+
+                            $usuarioAtualizar = $user->read_atualizarDeletar($id_user)[0];
+                            dadosAtualizados($usuarioAtualizar);
+
+                        }else{
+                            echo "<h1>O campo SENHA não pode ser nulo!</h1>";
+                        }
+
+
 
 
                     } catch (\PDOException $exception){
