@@ -1,0 +1,73 @@
+/* form-cadastro.css */
+
+/* Estilo para o fundo quadriculado na tela toda */
+body {
+    background-color: #C4F9FF;
+    background-image: linear-gradient(to right, white 1px, transparent 1px), linear-gradient(to bottom, white 1px, transparent 1px);
+    background-size: 20px 20px;
+    margin: 0;
+    text-align: center;
+    /* Define margem zero para alinhar com o lado esquerdo */
+}
+
+h2 {
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
+    margin: 4px;
+    margin-top: 20px; /* Ajuste na margem superior */
+}
+
+/* Estilo para o formulário de cadastro */
+#formulario {
+    width: 80%;
+    /* Aumentar a largura para 80% */
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 2px rgba(87, 87, 87, 0.082);
+    text-align: left;
+    /* Alinhar à esquerda */
+    margin-top: 20px;
+    background-color: #C4F9FF;
+    background-image: none;
+    /* Removendo o quadriculado do fundo do formulário */
+}
+
+#formulario label {
+    display: inline-block;
+    /* Torna as perguntas e campos de resposta em linha */
+    font-size: 18px;
+    margin-top: 10px;
+    width: 45%;
+    /* Define a largura das perguntas */
+}
+
+#formulario input[type="text"],
+#formulario input[type="email"],
+#formulario input[type="password"],
+#formulario input[type="date"],
+#formulario input[type="tel"] {
+    background-color: #E3FFF8;
+    border-radius: 20px;
+    padding: 10px;
+    border: none;
+    margin: 10px;
+    width: 45%;
+    /* Define a largura dos campos de resposta para serem iguais às perguntas */
+    font-size: 16px;
+    color: #444;
+}
+#formulario input[type="submit"] {
+    background-color: #FFB394;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    font-size: 18px;
+    cursor: pointer;
+    margin: 20px auto; /* Centralizar apenas o botão de submit */
+    display: block; /* Para garantir que a margem automática funcione corretamente */
+}
+
+#formulario input[type="submit"]:hover {
+    background-color: #ED8A59;
+}

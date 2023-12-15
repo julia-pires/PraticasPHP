@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Conta Bancária</title>
+</head>
+<body>
+
+<h1>Conta Bancária</h1>
+
+<form action="index.php" method="<?= $form->method; ?>" enctype="multipart/form-data">
+    Nome: <input type="text" name="nome"></br></br>
+    Extrato: <input type="int" name="extrato"></br></br>
+
+    O que você deseja realizar?
+    <select id="acao" name="acao">
+        <option value="saque">Saque</option>
+        <option value="deposito">Depósito</option>
+    </select></br></br>
+
+    Insira o valor da operação:
+    <input type="int" name="valor"></br></br>
+
+    Quer conferir o saldo após a operação?
+    <select id="exibir" name="exibir">
+        <option value="nao">Não</option>
+        <option value="sim">Sim</option>
+    </select></br></br>
+
+    <input type="submit" value="Enviar para a conta">
+
+
+</form>
+
+</body>
+</html>

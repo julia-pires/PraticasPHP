@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculadora</title>
+</head>
+<body>
+
+<h1>Calculadora</h1>
+
+<form action="maior2.php" method="<?= $form->method; ?>" enctype="multipart/form-data">
+    <label for="valor">Se o seu número for maior do que 2, clique aqui: </label>
+
+    <button type="submit" name="form">Maior que 2</button></br></br></br></br>
+</form>
+
+<form action="menor2.php" method="<?= $form->method; ?>" enctype="multipart/form-data">
+
+    <label for="valor">Informe dois números que deseja calcular:</label>
+    <input type="text" id="valor1" name="valor1">
+    <input type="text" id="valor2" name="valor2"><br><br>
+
+    <label for="operador">Escolha um operador para obter o resultado:</label>
+    <select name="operador" id="operador">
+        <option value="" selected disabled> Selecione uma opção</option>
+        <option value="+">Soma</option>
+        <option value="-">Subtração</option>
+        <option value="*">Multiplcação</option>
+        <option value="/">Divisão</option>
+        <option value="mediaArit">Média Aritmética</option>
+
+    </select><br><br>
+
+    <button type="submit" name="form">Enviar</button>
+    <br><br>
+</form>
+
+</body>
+</html>

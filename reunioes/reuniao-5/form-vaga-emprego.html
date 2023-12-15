@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastro de candidatura</title>
+</head>
+<body>
+
+<h2>Formulário de candidatura para novos colaboradores: </h2>
+
+<form action="validacao.php" method="<?= $form->method; ?>" enctype="multipart/form-data">
+    Nome: <input type="text" name="nome"></br></br>
+    E-mail: <input type="email" name="email"></br></br>
+    Telefone: <input type="tel" name="tel"></br></br>
+    CPF: <input type="text" name="cpf"></br></br>
+    Data de nascimento: <input type="date" name="dataNasc"></br></br>
+    Escolaridade:
+    <select name="escolaridade">
+        <option value="fundCompleto">Ensino Fundamental Completo</option>
+        <option value="fundIncompleto">Ensino Fundamental Incompleto</option>
+        <option value="medioCompleto">Ensino Médio Completo</option>
+        <option value="medioIncompleto">Ensino Médio Incompleto</option>
+        <option value="supCompleto">Ensino Superior Completo</option>
+        <option value="supIncompleto">Ensino Superior Incompleto</option>
+    </select>
+    </br></br>
+
+    Gênero:
+    <input type="radio" name="genero" value="feminino"> Feminino
+    <input type="radio" name="genero" value="masculino"> Masculino
+    <input type="radio" name="genero" value="nao_informar"> Não informar
+    </br></br>
+    CEP: <input type="text" name="cep"></br></br>
+    Currículo: <input type="file" name="curriculo"></br></br>
+
+    <input type="submit" value="Enviar dados">
+</form>
+
+
+</body>
+</html>

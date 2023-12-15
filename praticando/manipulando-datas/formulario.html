@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calcular data de entrega</title>
+</head>
+<body>
+
+<h2>Formulário de Pagamento</h2>
+
+<form method="<?= $form->method; ?>" action="calcular-data-entrega.php">
+    <label for="dataPagamento">Data de Pagamento:</label>
+    <input type="date" name="dataPagamento" id="dataPagamento" required></br>
+
+    <label for="tipoEnvio">Tipo de Envio:</label>
+    <select name="tipoEnvio" id="tipoEnvio" required>
+        <option value="expresso">Expresso</option>
+        <option value="normal">Normal</option>
+    </select></br></br>
+
+    <input type="submit" value="Calcular Data de Entrega">
+</form>
+
+</body>
+</html>

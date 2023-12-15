@@ -1,0 +1,39 @@
+/* Define a cor de fundo da página */
+body {
+    background-color: #C4F9FF;
+}
+
+/* Estiliza a tabela */
+table {
+    border-collapse: collapse;
+    width: 30%;
+    margin: 10px auto;
+    background-color: white;
+    border: 1px solid #FFB394;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3); /* Adiciona sombra */
+}
+
+/* Estiliza os cabeçalhos da tabela */
+th {
+    background-color: #FFB394;
+    color: white;
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #FFB394;
+}
+
+/* Estiliza as células da tabela */
+td {
+    padding: 10px;
+    border: 1px solid #FFB394;
+}
+
+/* Estiliza as células de dados alternadas */
+tr:nth-child(even) {
+    background-color: #FFECDB;
+}
+
+/* Centraliza o título */
+h2 {
+    text-align: center;
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculadora</title>
+</head>
+<body>
+
+<h1>Calculadora</h1>
+<form action="calculadora.php" method="<?= $form->method; ?>" enctype="multipart/form-data">
+
+    <label for="valor">Informe dois números que deseja calcular:</label>
+    <input type="number" id="valor1" name="valor1">
+    <input type="number" id="valor2" name="valor2"><br><br>
+
+    <label for="operador">Escolha um operador para obter o resultado:</label>
+    <select name="operador" id="operador">
+        <option value="" selected disabled> Selecione uma opção</option>
+        <option value="+">Soma</option>
+        <option value="-">Subtração</option>
+        <option value="*">Multiplcação</option>
+        <option value="/">Divisão</option>
+
+    </select><br><br>
+
+    <button type="submit" name="form">Enviar</button>
+    <br><br>
+</form>
+
+</body>
+</html>

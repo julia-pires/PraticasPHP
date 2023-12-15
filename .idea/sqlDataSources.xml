@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SqlDataSourceStorage">
+    <option name="dataSources">
+      <list>
+        <State>
+          <option name="id" value="b0c98709-be6b-439f-9fa9-20cad599011f" />
+          <option name="name" value="estudos" />
+          <option name="dbmsName" value="UNKNOWN" />
+          <option name="urls">
+            <array>
+              <option value="file://$USER_HOME$/Downloads/estudos.sql" />
+            </array>
+          </option>
+          <option name="outLayout" value="File per object by schema.groovy" />
+        </State>
+      </list>
+    </option>
+  </component>
+</project>

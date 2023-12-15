@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculadora</title>
+</head>
+<body>
+
+<h1>Calculadora</h1>
+<form action="form-calculadora1.html" method="<?= $form->method; ?>" enctype="multipart/form-data">
+
+    <label for="valor">Informe quantos números deseja calcular:</label>
+
+    <select name="operador" id="operador">
+        <option value="" selected disabled> Selecione uma opção</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+    </select><br><br>
+
+    <button type="submit" name="form">Enviar</button>
+    <br><br>
+</form>
+
+</body>
+</html>
