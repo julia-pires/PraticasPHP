@@ -1,5 +1,4 @@
 <?php
-
 require_once __DIR__ . "/Boot/Helpers.php";
 require_once __DIR__ . "/Boot/Config.php";
 require_once __DIR__ . "/Core/Connect.php";
@@ -33,13 +32,9 @@ if ($usuarioAtualizar && $_POST) { //se tiver interação com o formulário
         echo "<h1>Preencha todos os campos!</h1>";
         die();
     }
-
     if (validarEmail($email) == true) {
-
         if (validarDataNasc($dataNasc) == true) {
-
             if (validarTelefone($telefone) == true) {
-
                 if (validar_senha($senha)) {
                     $senha = $usuarioAtualizar["senha"];
 
@@ -47,7 +42,6 @@ if ($usuarioAtualizar && $_POST) { //se tiver interação com o formulário
                     $updated = (new DateTime())->format(CONF_DATE_FORMAT_DB);
 
                     try {
-
                         $postArray =  filter_input_array(INPUT_POST, FILTER_SANITIZE_FULL_SPECIAL_CHARS);
                         $nome = $postArray["nome"];
                         $sobrenome = $postArray["sobrenome"];
@@ -78,32 +72,20 @@ if ($usuarioAtualizar && $_POST) { //se tiver interação com o formulário
                             echo "<h1>O campo SENHA não pode ser nulo!</h1>";
                         }
 
-
-
-
                     } catch (\PDOException $exception){
                         echo "<h1>Erro ao atualizar</h1>";
                     }
-
-
                 } else {
                     echo "<h1>Senha inválida! Tente novamente.</h1>";
                 }
-
             } else {
                 echo "<h1>Número de telefone inválido :/ Tente novamente!</h1>";
             }
-
-
         } else {
             echo "<h1>Data de nascimento inválida</h1>";
-
         }
     } else {
         echo "<h1>Insira um e-mail válido!</h1>";
     }
 }
-
 require __DIR__ . "/view/form-editar.php";
-
-

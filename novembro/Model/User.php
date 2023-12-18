@@ -1,7 +1,6 @@
 <?php
 
 namespace Model;
-
 require_once __DIR__ . "/../Core/tabela-resultados.php";
 
 /**
@@ -17,7 +16,6 @@ class User
     {
         $this->db = $db;
     }
-
 
     /***
      * VERIFICAR EMAIL
@@ -36,7 +34,6 @@ class User
         return $resultado['total'] > 0;
     }
 
-
     /***
      * USER INSERT
      * @param $nome
@@ -52,7 +49,6 @@ class User
     public function inserirUsuario($nome, $sobrenome, $email, $senha, $dataNasc, $telefone, $created, $ip)
     {
         // Verificar se o e-mail já está cadastrado
-
         $insert = "INSERT INTO users 
                 (nome, sobrenome, email, senha, data_nascimento, telefone, created_at, user_ip)
                 VALUES
@@ -69,7 +65,6 @@ class User
         $stmt->bindParam(':created_at', $created);
         $stmt->bindParam(':user_ip', $ip);
 
-
         try {
             $stmt->execute();
             //echo "<h1>Dados salvos com sucesso! :)</h1>";
@@ -78,6 +73,18 @@ class User
         }
     }
 
+    /**
+     * @param $id
+     * @param $nome
+     * @param $sobrenome
+     * @param $email
+     * @param $senha
+     * @param $dataNasc
+     * @param $telefone
+     * @param $updated
+     * @param $ip
+     * @return mixed
+     */
     public function atualizarUsuario($id, $nome, $sobrenome, $email, $senha, $dataNasc, $telefone, $updated, $ip)
     {
         // Verificar se o e-mail já está cadastrado
@@ -87,14 +94,16 @@ class User
              WHERE id= {$id}";
 
         $stmt = $this->db->prepare($update);
-
         return $stmt->execute();
 
     }
 
+    /**
+     * @param $id
+     * @return mixed
+     */
     public function deletarUsuario($id)
     {
-
         $delete = "DELETE FROM users WHERE id= {$id}";
         $stmt = $this->db->prepare($delete);
 
@@ -102,15 +111,17 @@ class User
 
     }
 
+    /**
+     * @param $id
+     * @return mixed
+     */
     public function read_atualizarDeletar($id)
     {
-
         $consulta = "SELECT * FROM users WHERE id={$id}";
         $stmt = $this->db->query($consulta);
         $resultados = $stmt->fetchAll(\PDO::FETCH_ASSOC);
 
         return $resultados;
-
     }
 
     /**
@@ -119,18 +130,14 @@ class User
      */
     public function read()
     {
-
         $consulta = "SELECT * FROM users";
         $stmt = $this->db->query($consulta);
         $resultados = $stmt->fetchAll(\PDO::FETCH_ASSOC);
 
         $resultadoTabela = tabelaResultados($resultados);
         echo $resultadoTabela;
-
     }
-
     //no lugar da função, colocar um método aqui para exibir a tabela
-
 }
 
 
